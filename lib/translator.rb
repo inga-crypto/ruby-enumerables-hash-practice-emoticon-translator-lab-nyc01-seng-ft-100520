@@ -11,7 +11,6 @@ def load_library(file)
   ruby_hash
 end
 
-<<<<<<< HEAD
 def get_japanese_emoticon(file, english_emoji)
   dictionary = load_library(file)
   translated = dictionary.find {|name, translations| translations[:english] == english_emoji}
@@ -34,18 +33,3 @@ def get_english_meaning(file, japanese_emoji)
 end
 
 #pp get_english_meaning("./lib/emoticons.yml", "(＾ｖ＾)")
-=======
-def get_japanese_emoticon(file, j)
- h = load_library(file)
- translated = h.find {|name, t| t[:japanese] == j}
- puts translated.inspect
- translated[0] if translated
-end
-
-def get_english_meaning(file, eng)
-  h = load_library(file)
- translated = h.find {|name, t| t[:english] == eng}
- puts translated.inspect
- translated[0] if translated
-end
->>>>>>> a88f5230f27925ea56c21659f3eb31b738de5165
